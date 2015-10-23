@@ -1,6 +1,6 @@
 # separator used by search.py, categories.py, ...
 SEPARATOR = ";"
-import settings
+from ThinkGamingCom import settings
 
 LANG            = settings.LANG #"en_US" # can be en_US, fr_FR, ...
 ANDROID_ID      = settings.ANDROID_ID #"38c6523ac43ef9e1"

@@ -1,18 +1,15 @@
 #!/usr/bin/python
 
-import base64
-import gzip
-import pprint
-import StringIO
 import requests
-
 from google.protobuf import descriptor
 from google.protobuf.internal.containers import RepeatedCompositeFieldContainer
 from google.protobuf import text_format
-from google.protobuf.message import Message, DecodeError
+from google.protobuf.message import Message
 
 import googleplay_pb2
-import settings
+from ThinkGamingCom import settings
+
+
 # import config
 
 class LoginError(Exception):
