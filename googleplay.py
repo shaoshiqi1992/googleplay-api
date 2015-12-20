@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import requests
+
 from google.protobuf import descriptor
 from google.protobuf.internal.containers import RepeatedCompositeFieldContainer
 from google.protobuf import text_format
@@ -138,6 +139,7 @@ class GooglePlayAPI(object):
             if "auth" in params:
                 self.setAuthSubToken(params["auth"])
             elif "error" in params:
+                print params["error"]
                 raise LoginError("server says: " + params["error"])
             else:
                 raise LoginError("Auth token not found.")
