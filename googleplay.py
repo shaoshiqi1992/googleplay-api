@@ -139,7 +139,7 @@ class GooglePlayAPI(object):
             if "auth" in params:
                 self.setAuthSubToken(params["auth"])
             elif "error" in params:
-                print params["error"]
+                # print params["error"]
                 raise LoginError("server says: " + params["error"])
             else:
                 raise LoginError("Auth token not found.")
