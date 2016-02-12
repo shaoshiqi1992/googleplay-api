@@ -8,8 +8,7 @@ from google.protobuf import text_format
 from google.protobuf.message import Message
 
 import googleplay_pb2
-from ThinkGamingCom import settings
-
+from django.conf import settings
 
 # import config
 
