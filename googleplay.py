@@ -123,7 +123,8 @@ class GooglePlayAPI(object):
                                 "device_country": "us",
                                 "operatorCountry": "us",
                                 "lang": "us",
-                                "sdk_version": "23"}
+                                "sdk_version": "22"}
+            print params
             headers = {
                 "Accept-Encoding": "",
             }
@@ -138,7 +139,7 @@ class GooglePlayAPI(object):
             if "auth" in params:
                 self.setAuthSubToken(params["auth"])
             elif "error" in params:
-                # print params["error"]
+                print params
                 raise LoginError("server says: " + params["error"])
             else:
                 raise LoginError("Auth token not found.")
@@ -155,8 +156,8 @@ class GooglePlayAPI(object):
                                     "X-DFE-Client-Id": "am-android-google",
                                     #"X-DFE-Logging-Id": self.loggingId2, # Deprecated?
                                     # "User-Agent": "Android-Finsky/4.4.3 (api=3,versionCode=8016014,sdk=22,device=GT-I9300,hardware=aries,product=GT-I9300)",
-                                    # "User-Agent": "Android-Finsky/4.4.3 (api=3,versionCode=8016014,sdk=22,device=hammerhead,hardware=hammerhead,product=hammerhead)",
-                                    "User-Agent": "Android-Finsky/5.12.7 (api=3, versionCode=80391200,sdk=23,device=angler,hardware=angler,product=angler, build=MTC19T:user )",
+                                    "User-Agent": "Android-Finsky/4.4.3 (api=3,versionCode=8016014,sdk=22,device=hammerhead,hardware=hammerhead,product=hammerhead)",
+                                    # "User-Agent": "Android-Finsky/5.12.7 (api=3, versionCode=80391200,sdk=23,device=angler,hardware=angler,product=angler, build=MTC19T:user )",
                                     # "User-Agent": "Android-Finsky/3.7.13 (api=3,versionCode=8013013,sdk=22,device=crespo,hardware=herring,product=soju)",
                                     "X-DFE-SmallestScreenWidthDp": "335",
                                     "X-DFE-Filter-Level": "3",
